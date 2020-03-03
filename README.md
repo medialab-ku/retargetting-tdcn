@@ -1,4 +1,4 @@
-# Neural Kinematic Networks for Unsupervised Motion Retargetting
+# Motion Retargetting based on Dilated Convolutions and Skeleton-specific Loss Functions
 
 This is the code for the EG 2020 paper [Motion Retargetting based on Dilated Convolutions and Skeleton-specific Loss Functions](https://sites.google.com/view/retargetting-tdcn) by SangBin Kim, Inbum Park, Seongsu Kwon, and JungHyun Han.
 
