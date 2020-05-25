@@ -37,7 +37,17 @@ python evaluate.py --config=ours.retargetting-tdcn --epoch==[target_epoch]
 
 
 ## Citation                                                                      
-* TBD                                                                                 
+```
+@article{kim2020retargetting,
+author = {Kim, SangBin and Lee, SinJae and Han, JungHyun},
+title = {Motion Retargetting based on Dilated Convolutions and Skeleton-specific Loss Functions},
+journal = {Computer Graphics Forum (Proc. Eurographics)},
+year = {2020},
+volume = {39},
+number = {2},
+pages = {},
+}
+```
 
 ## Contact
 Please contact "sang-bin@korea.ac.kr" if you have any questions.
