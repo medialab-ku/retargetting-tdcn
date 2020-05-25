@@ -284,14 +284,20 @@ def copy_model(cfg, epoch):
         raise ValueError("path does not exist!:" + gen_param_path)
 
     from core.saver import CKPT_FMT
-    if not os.path.isfile(os.path.join(gen_param_path, CKPT_FMT.format(epoch))):
-        raise ValueError("The target epoch doen not exist. Please check the config and the target epoch.")
+    target = 'best.ckpt'
+    if epoch is None:
+        if not os.path.isfile(os.path.join(gen_param_path, 'best.ckpt')):
+            raise ValueError("The best ckeckpoint doen not exist. Please check the config and the model.")
+    else:
+        if not os.path.isfile(os.path.join(gen_param_path, CKPT_FMT.format(epoch))):
+            raise ValueError("The target epoch doen not exist. Please check the config and the target epoch.")
+        target = CKPT_FMT.format(epoch)
 
     if not os.path.exists(eval_param_path):
         os.makedirs(eval_param_path)
 
     import shutil
-    shutil.copy(os.path.join(gen_param_path, CKPT_FMT.format(epoch)),
+    shutil.copy(os.path.join(gen_param_path, target),
                 os.path.join(eval_param_path, '0001.ckpt'))
 
 

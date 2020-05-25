@@ -199,7 +199,7 @@ def parse_args():
 
     parser.add_argument('--epoch',
                         help='The target epoch of the configuration',
-                        default='ours.retargetting-tdcn',
+                        default=None,
                         type=int)
 
     parser.add_argument('--shortseq',
