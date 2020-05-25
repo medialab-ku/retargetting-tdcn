@@ -1,14 +1,10 @@
 #!/bin/bash
-# This code is from https://github.com/rubenvillegas/cvpr2018nkn
 
 cd ./datasets
 
-wget -O test.tar.gz https://umich.box.com/shared/static/5q39kgt2ftkfy352rr2lmwuzrhqjxwvy.gz
-
-tar -xvzf test.tar.gz
-
-rm test.tar.gz
-mv test/*npy .
+wget -O test.zip "https://koreaoffice-my.sharepoint.com/:u:/g/personal/sang-bin_korea_edu/Ef4pz2xtsCpCrYDEd4fzT2oB62SVK3CpQyh-uBPH6ka3tg?e=almg58?download=1"
+unzip test.zip
+rm test.zip
 
 cd ../
 
